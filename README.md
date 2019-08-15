@@ -1,5 +1,44 @@
-# JavaEE2019_Assignment3
-Java EE project about a gym web page, using restful services. BJTUers!
 
-åŸºäºAssignment 3ï¼Œå°ç»„åˆ©ç”¨kafkaå®ç°æ¶ˆæ¯çš„ä¼ è¾“
-ç‰ˆæœ¬ kafka 2.2.1
+# »ùÓÚspringµÄ½¡Éí¾ãÀÖ²¿ºó¶Ë´úÂë
+
+## »ù±¾ÒµÎñÂß¼­
+
+µ±ÓĞ´óÁ¿µÄÓÃ»§Í¬Ê±Ìá½»ÉêÇë²Î¼Ó½¡Éí¿Î³ÌµÄ±íÊ±£¬Ö±½Ó½øĞĞÊı¾İ¿âµÄ²Ù×÷»áÀË·ÑºÜ¶àÊ±¼ä£¬ÏµÍ³µÄÏûÏ¢¶ÓÁĞÒ²»áºÜÓµ¶Â¡£ËùÒÔÎÒÃÇ½«¡°·µ»ØÒ³Ãæ¡±ºÍ¡°´æÈëÊı¾İ¿â¡±µÄÁ½¸ö²Ù×÷½øĞĞÁË·ÖÀë£¬ÈÃ´æ´¢µ½Êı¾İ¿âÕâ¸ö²Ù×÷Óë·µ»Ø½çÃæÒì²½Ìá¸ßÏµÍ³µÄÏìÓ¦Ğ§ÂÊ¡£
+
+## ÊµÏÖÂß¼­
+
+Ê¹ÓÃkafka×÷ÎªÏûÏ¢µÄÖĞ¼ä¼ş£¬½«Ìá½»ÉÏÀ´µÄÓÃ»§µÄĞÅÏ¢×÷ÎªÏûÏ¢µÄÄÚÈİ·¢²¼µ½informationÕâ¸ötopicÖĞÈ¥,·µ»Ø½çÃæ£¬ÏÔÊ¾ÓÃ»§ĞÅÏ¢ÕıÔÚ±£´æ¡£
+´¦Àí¶Ë¼àÌı¡°information¡±Õâ¸ötopic£¬Ìıµ½ĞÅÏ¢ºó£¬½«ĞÅÏ¢½âÂëÖ®ºó´æ´¢µ½Êı¾İ¿âÖĞÈ¥¡£
+
+ÊµÏÖ´úÂë£º
+£¨1£©ÒıÈëspring-kafkaÒÀÀµ£¨pom.xml£©
+
+>        <dependency>
+>            <groupId>org.apache.kafka</groupId>
+>            <artifactId>kafka-streams</artifactId>
+>        </dependency>
+>        <dependency>
+>            <groupId>org.springframework.kafka</groupId>
+>            <artifactId>spring-kafka</artifactId>
+>        </dependency>
+£¨2£©ÅäÖÃspring-kafka£¨application.properties£©
+>       #Kafka Topic 
+>       message.topic.name=information
+>       spring.kafka.bootstrap-servers=localhost:9092
+>       #Unique String which identifies which consumer group this       consumer belongs to
+>       spring.kafka.consumer.group-id=jcg-group
+£¨3£©ÅäÖÃProducer
+
+![Í¼Æ¬Èı](/picture/Í¼Æ¬3.png)
+
+£¨4£©ÅäÖÃConsumer
+
+![Í¼Æ¬Èı](/picture/Í¼Æ¬2.png)
+
+£¨5£©PostÉêÇë±í
+
+![Í¼Æ¬Èı](/picture/Í¼Æ¬4.png)
+
+£¨6£©·¢ËÍ¸økafka¼¯Èº
+
+![Í¼Æ¬Èı](/picture/Í¼Æ¬5.png)
